@@ -2,6 +2,7 @@ package org.wikipedia.miner.extract.util;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -133,7 +134,7 @@ public class Languages {
 		}
 
 		public List<NamespaceAlias> getNamespaceAliases() {
-			return namespaceAliases;
+			return namespaceAliases == null ? Collections.<NamespaceAlias>emptyList() : namespaceAliases;
 		}
 
 		public Pattern getDisambigPattern() {

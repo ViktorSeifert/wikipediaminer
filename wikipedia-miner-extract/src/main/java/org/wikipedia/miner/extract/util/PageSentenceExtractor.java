@@ -33,7 +33,7 @@ public class PageSentenceExtractor {
 
 	public PageSentenceExtractor(Path sentenceModel) throws InvalidFormatException, IOException {
 
-		InputStream sentenceModelStream = new FileInputStream(sentenceModel.toString());
+		InputStream sentenceModelStream = new FileInputStream(sentenceModel.toUri().getPath());
 		init(sentenceModelStream) ;
 	}
 	

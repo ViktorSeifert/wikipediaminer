@@ -40,6 +40,9 @@ public class SiteInfo {
 	
 	@ElementList(name="namespaces",entry="namespace")
 	private List<Namespace> namespaces ;
+
+	@Element
+	private String dbname;
 	
 	@Transient
 	private Map<String, Namespace> namespacesByName  ;

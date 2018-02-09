@@ -40,7 +40,7 @@ public class InitialDepthMapper extends AvroMapper<Pair<Integer, PageDetail>, Pa
 			for (Path cf:cacheFiles) {
 
 				if (cf.getName().equals(new Path(job.get(DumpExtractor.KEY_LANG_FILE)).getName())) {
-					language = Languages.load(new File(cf.toString())).get(job.get(DumpExtractor.KEY_LANG_CODE)) ;
+					language = Languages.load(new File(cf.toUri().getPath())).get(job.get(DumpExtractor.KEY_LANG_CODE)) ;
 				}
 
 			}

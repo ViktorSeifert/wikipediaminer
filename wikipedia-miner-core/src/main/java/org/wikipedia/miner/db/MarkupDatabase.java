@@ -21,8 +21,6 @@ import com.sleepycat.bind.tuple.StringBinding;
 import com.sleepycat.je.Database;
 import com.sleepycat.je.DatabaseEntry;
 
-import org.apache.tools.bzip2.* ;
-
 /**
  * A {@link WDatabase} for associating page ids with page markup. 
  * 
@@ -86,9 +84,9 @@ public class MarkupDatabase extends WDatabase<Integer, String> {
 		
 		InputStream reader ;
 		
-		if (dataFile.getName().endsWith(".bz2"))
+		/*if (dataFile.getName().endsWith(".bz2"))
 			reader = new CBZip2InputStream(new FileInputStream(dataFile)) ;
-		else
+		else*/
 			reader = new FileInputStream(dataFile) ;
 
 		XMLInputFactory xmlStreamFactory = XMLInputFactory.newInstance() ;

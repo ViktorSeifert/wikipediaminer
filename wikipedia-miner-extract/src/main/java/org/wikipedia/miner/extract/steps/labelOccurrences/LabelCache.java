@@ -94,7 +94,7 @@ public class LabelCache {
 			
 			tracker.update();
 			
-			File file = new File(path.toString()) ;
+			File file = new File(path.toUri().getPath()) ;
 			
 			Schema schema = Pair.getPairSchema(Schema.create(Type.STRING),LabelSenseList.getClassSchema()) ;
 			

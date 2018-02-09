@@ -28,7 +28,7 @@ public class Util {
 
 	public static long getFileSize(Path path) {
 
-		File file = new File(path.toString()) ;
+		File file = new File(path.toUri().getPath()) ;
 
 		return file.length() ;
 	}

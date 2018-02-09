@@ -71,11 +71,11 @@ public class InitialMapper extends MapReduceBase implements Mapper<LongWritable,
 			for (Path cf:cacheFiles) {
 
 				if (cf.getName().equals(new Path(DumpExtractor.OUTPUT_SITEINFO).getName())) {
-					siteInfo = SiteInfo.load(new File(cf.toString())) ;
+					siteInfo = SiteInfo.load(new File(cf.toUri().getPath())) ;
 				}
 
 				if (cf.getName().equals(new Path(job.get(DumpExtractor.KEY_LANG_FILE)).getName())) {
-					language = Languages.load(new File(cf.toString())).get(job.get(DumpExtractor.KEY_LANG_CODE)) ;
+					language = Languages.load(new File(cf.toUri().getPath())).get(job.get(DumpExtractor.KEY_LANG_CODE)) ;
 				}
 
 				if (cf.getName().equals(new Path(job.get(DumpExtractor.KEY_SENTENCE_MODEL)).getName())) {
